@@ -1,0 +1,43 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.AdvancedTODO" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/theme_color_3</item>
+        <item name="colorPrimaryVariant">@color/theme_color_4</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/theme_color_1</item>
+        <item name="colorSecondaryVariant">@color/theme_color_2</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/toolbar</item>
+        <item name="android:forceDarkAllowed">false</item>
+
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="fragments" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/theme_color_3</item>
+        <item name="colorPrimaryVariant">@color/theme_color_4</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/theme_color_1</item>
+        <item name="colorSecondaryVariant">@color/theme_color_2</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:background">@mipmap/background</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/toolbar</item>
+        <item name="android:forceDarkAllowed">false</item>
+    </style>
+
+    <style name="GoogleButton">
+        <item name="colorPrimary">@color/google</item>
+    </style>
+    <style name="SignInButton">
+        <item name="colorPrimary">@color/theme_color_4</item>
+    </style>
+    <style name="restButtons">
+        <item name="colorPrimary">@color/theme_color_1</item>
+    </style>
+
+</resources>

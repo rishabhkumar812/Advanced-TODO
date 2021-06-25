@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="grey">#ADADAD</color>
+    <!--For theme-->
+    <color name="Cadmium_Orange">#e18335</color>
+    <color name="background">#c8c2bc</color>
+    <color name="toolbar">#ba135d</color>
+    <color name="status_bar">#730636</color>
+    <color name="primary">#13BA70</color>
+    <color name="Citrine">#e4cc37</color>
+    <color name="Yellow_Green">#8fc93a</color>
+    <color name="French_Blue">#0072bb</color>
+    <color name="Green_Blue_Crayola">#1e91d6</color>
+
+
+    <color name="theme_color_1">#ba135d</color>
+    <color name="theme_color_2">#b0ba13</color>
+    <color name="theme_color_3">#13ba70</color>
+    <color name="theme_color_4">#1d13ba</color>
+
+    <color name="google">#D44638</color>
+
+</resources>
