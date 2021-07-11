@@ -131,7 +131,7 @@ class MainActivity : AppCompatActivity() {
         supportFragmentManager.beginTransaction()
             .replace(
                 R.id.frame,
-                AboutFragment()
+                HomeFragment()
             )
             .commit()
         supportActionBar?.title = "TODO"
