@@ -4,23 +4,37 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/cardViewForTODO"
     android:layout_width="match_parent"
-    android:layout_height="200dp"
+    android:layout_height="169dp"
     android:layout_margin="5dp"
     app:cardCornerRadius="10dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="169dp">
 
         <TextView
-            android:padding="5dp"
-            android:id="@+id/todoCardTextView"
+            android:id="@+id/todoTitle"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="35dp"
+            android:padding="5dp"
             android:text="Todo item by user."
             android:textColor="@color/black"
             android:textSize="16sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@id/todoTitle"
+            android:padding="5dp" />
+
+        <TextView
+            android:id="@+id/deadline"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_below="@id/description"
+            android:padding="5dp" />
 
     </RelativeLayout>
 

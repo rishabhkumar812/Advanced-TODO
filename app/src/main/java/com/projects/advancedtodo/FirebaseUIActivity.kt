@@ -46,7 +46,9 @@ class FirebaseUIActivity : AppCompatActivity() {
     }
 
     fun useWithNoSignIn(view:View) {
-        /**TODO Code for no sign-in users*/
+        /**FirebaseAuth.getInstance().currentUser should be null*/
+        startActivity(Intent(this,MainActivity::class.java))
+        finish()
     }
 
     fun howToUse(view:View) {

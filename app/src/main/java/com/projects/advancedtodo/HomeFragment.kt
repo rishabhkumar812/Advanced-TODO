@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import java.time.LocalDateTime
 
 class HomeFragment : Fragment() {
 
@@ -44,12 +45,12 @@ class HomeFragment : Fragment() {
         viewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
 
         //fake data
-        val myTodo = listOf<String>(
-                "Study",
-                "Football",
-                "Driving",
-                "Youtube",
-                "Coursera")
+        val myTodo = listOf<TodoEntity>(
+                TodoEntity("Study","Complete my next novel.","12:00 PM - 10 Jan 2021"),
+                TodoEntity("Football","Practice for tournament.","12:00 AM - 21 Nov 2021"),
+                TodoEntity("Driving","Practice driving before my DL test.","12:00 PM - 14 Jun 2021"),
+                TodoEntity("Youtube","Create my new youtube channel for vlogs","09:00 AM - 31 Dec 2021"),
+                TodoEntity("Coursera","Complete my Moocs course for 4 credits","12:00 AM - 16 Aug 2021"))
 
         todoRecyclerViewAdapter.setTODOItems(myTodo)
 

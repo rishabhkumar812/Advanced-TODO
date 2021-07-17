@@ -16,6 +16,7 @@ import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.firebase.ui.auth.AuthUI
 import com.google.android.material.navigation.NavigationView
+import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
 
@@ -42,7 +43,7 @@ class MainActivity : AppCompatActivity() {
         val headerView = navigationView.getHeaderView(0)
         txtHeaderName = headerView.findViewById(R.id.txtHeaderName)
 
-        txtHeaderName.text=sharedPreferences.getString("userEmail","None")
+        txtHeaderName.text=sharedPreferences.getString("userEmail","Guest")
         setUpToolbar()
 
         val actionBarDrawerToggle = ActionBarDrawerToggle(
@@ -85,7 +86,10 @@ class MainActivity : AppCompatActivity() {
 
                     val dialog = AlertDialog.Builder(this)
                     dialog.setTitle("Confirmation")
-                    dialog.setMessage("Are you sure you want to exit?")
+                    if(FirebaseAuth.getInstance().currentUser!=null)
+                        dialog.setMessage("Are you sure you want to exit?")
+                    else
+                        dialog.setMessage("Your data will not be available. Are you sure you want to exit?")
 
                     dialog.setPositiveButton("YES") { text, listener ->
                         signOut()

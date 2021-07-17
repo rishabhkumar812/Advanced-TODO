@@ -20,7 +20,7 @@
         android:padding="8dp"
         android:text="Name"
         android:textColor="#ffffff"
-        android:textSize="18sp"
+        android:textSize="30sp"
         android:textStyle="bold" />
 
 

@@ -10,11 +10,13 @@ import androidx.recyclerview.widget.RecyclerView
 
 class TodoRecyclerViewAdapter(context: Context) : RecyclerView.Adapter<TodoRecyclerViewAdapter.TodoRecyclerViewHolder>() {
 
-    private var todoItems:List<String>? = null
+    private var todoItems:List<TodoEntity>? = null
     private val mInflater: LayoutInflater = LayoutInflater.from(context)
 
     class TodoRecyclerViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val todoCardTextView:TextView = view.findViewById(R.id.todoCardTextView)
+        val todoTitle:TextView = view.findViewById(R.id.todoTitle)
+        val todoDesc:TextView = view.findViewById(R.id.description)
+        val todoDeadLine:TextView = view.findViewById(R.id.deadline)
         val cardViewForTodo:CardView = view.findViewById(R.id.cardViewForTODO)
     }
 
@@ -31,15 +33,16 @@ class TodoRecyclerViewAdapter(context: Context) : RecyclerView.Adapter<TodoRecyc
     override fun onBindViewHolder(holder: TodoRecyclerViewHolder, position: Int) {
         if(todoItems!=null){
             val currTodoItem = todoItems!![position]
-            holder.todoCardTextView.text=currTodoItem
-
+            holder.todoTitle.text=currTodoItem.task
+            holder.todoDesc.text=currTodoItem.descriptor
+            holder.todoDeadLine.text=currTodoItem.deadline
             holder.cardViewForTodo.setOnClickListener {
             //TODO open details
             }
         }
     }
 
-    fun setTODOItems(items:List<String>) {
+    fun setTODOItems(items:List<TodoEntity>) {
         todoItems=items
         notifyDataSetChanged()
     }
